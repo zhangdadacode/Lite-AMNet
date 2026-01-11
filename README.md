@@ -30,6 +30,7 @@ pip install -r requirements.txt
 
 # 5. Install Manopth (if needed)
 # pip install manopth
+```
 
 ## 🔗 Dataset
 ###  FreiHAND
@@ -37,18 +38,13 @@ pip install -r requirements.txt
 *Please download FreiHAND dataset from [this link](https://lmb.informatik.uni-freiburg.de/projects/freihand/), and create a soft link in `data`, i.e., `data/FreiHAND`.
 *   Download mesh GT file `freihand_train_mesh.zip`, and unzip it under `data/FreiHAND/training`.
 
-### Human3.6M
-
-*   The official data is now not available. Please follow [I2L repo]([PUT_I2L_REPO_LINK_HERE](https://lmb.informatik.uni-freiburg.de/projects/freihand/)) to download it.
-*   Download silhouette GT file `h36m_mask.zip`, and unzip it under `data/Human3.6M`.
-
 ### Real World Testset
 
-*   Please download the dataset from [this link](PUT_YOUR_REAL_WORLD_LINK_HERE), and create a soft link in `data`, i.e., `data/Ge`.
+*   Please download the dataset from [this link]([PUT_YOUR_REAL_WORLD_LINK_HERE](https://github.com/3d-hand-shape/hand-graph-cnn/tree/master/data/real_world_testset)), and create a soft link in `data`, i.e., `data/Ge`.
 
 ### Complement data
 
-*   See [this file](PUT_FILE_LINK_HERE) for complement data. Then, create a soft link in `data`, i.e., `data/CompHand`.
+*   See [this file]([PUT_FILE_LINK_HERE](https://github.com/SeanChenxy/HandMesh/blob/main/complement_data.md)) for complement data. Then, create a soft link in `data`, i.e., `data/Compdata`.
 
 
 
