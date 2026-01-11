@@ -66,17 +66,21 @@ data
 ### Complement data
 
 *   See [this file](https://github.com/SeanChenxy/HandMesh/blob/main/complement_data.md)for complement data. Then, create a soft link in `data`, i.e., `data/Compdata`.
+```
 
-## 🔗 train
-运行下列命令进行训练
-
+## train
+```bash
 python main.py --exp_name Lite_AMNet --PHASE train --Local_testing --config_file .\configs\Lite-AMNet.yml
+```
 
 ## 🔗 Evaluation
-运行下列命令进行评估
-
+```bash
+To evaluate our model, please download the pre-trained weights via [this link](PUT_YOUR_LINK_HERE) and place them in the `checkpoints` folder.
 python main.py --exp_name Lite_AMNet --PHASE pred  --Local_testing --config_file .\configs\Lite-AMNet.yml
+```
 
 ## 🔗 Visualize model
-运行下列模型进行模型的可视化
+```bash
 python main.py --PHASE demo_test_new_data --exp_name mobrecon_spconv --config_file ./configs/Lite-AMNet.yml --opts MODEL.NAME LiteSpiralGCN TRAIN.GPU_ID "[-1]" DATA.FREIHAND.USE True TRAIN.DATASET FreiHAND VAL.DATASET FreiHAND TEST.DATASET FreiHAND MODEL.RESUME ""
+```
+
