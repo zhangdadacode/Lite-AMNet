@@ -33,6 +33,27 @@ pip install -r requirements.txt
 ```
 
 ## 🔗 Dataset
+Please download the datasets and organize the directory as follows:
+
+```text
+data
+├── Compdata
+│   ├── base_pose
+│   ├── trans_pose_batch1
+│   ├── trans_pose_batch2
+│   └── trans_pose_batch3
+├── FreiHAND
+│   ├── evaluation
+│   ├── training
+│   ├── cmr_g.json
+│   ├── evaluation_*.json
+│   ├── training_*.json
+│   └── information.txt
+└── Ge
+    ├── images
+    ├── params.mat
+    └── pose_gt.mat
+
 ###  FreiHAND
 
 *Please download FreiHAND dataset from [this link](https://lmb.informatik.uni-freiburg.de/projects/freihand/), and create a soft link in `data`, i.e., `data/FreiHAND`.
@@ -40,11 +61,22 @@ pip install -r requirements.txt
 
 ### Real World Testset
 
-*   Please download the dataset from [this link]([PUT_YOUR_REAL_WORLD_LINK_HERE](https://github.com/3d-hand-shape/hand-graph-cnn/tree/master/data/real_world_testset)), and create a soft link in `data`, i.e., `data/Ge`.
+*   Please download the dataset from [this link](https://github.com/3d-hand-shape/hand-graph-cnn/tree/master/data/real_world_testset), and create a soft link in `data`, i.e., `data/Ge`.
 
 ### Complement data
 
-*   See [this file]([PUT_FILE_LINK_HERE](https://github.com/SeanChenxy/HandMesh/blob/main/complement_data.md)) for complement data. Then, create a soft link in `data`, i.e., `data/Compdata`.
+*   See [this file](https://github.com/SeanChenxy/HandMesh/blob/main/complement_data.md)for complement data. Then, create a soft link in `data`, i.e., `data/Compdata`.
 
+## 🔗 train
+运行下列命令进行训练
 
+python main.py --exp_name Lite_AMNet --PHASE train --Local_testing --config_file .\configs\Lite-AMNet.yml
 
+## 🔗 Evaluation
+运行下列命令进行评估
+
+python main.py --exp_name Lite_AMNet --PHASE pred  --Local_testing --config_file .\configs\Lite-AMNet.yml
+
+## 🔗 Visualize model
+运行下列模型进行模型的可视化
+python main.py --PHASE demo_test_new_data --exp_name mobrecon_spconv --config_file ./configs/Lite-AMNet.yml --opts MODEL.NAME LiteSpiralGCN TRAIN.GPU_ID "[-1]" DATA.FREIHAND.USE True TRAIN.DATASET FreiHAND VAL.DATASET FreiHAND TEST.DATASET FreiHAND MODEL.RESUME ""
