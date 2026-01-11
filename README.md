@@ -39,7 +39,7 @@ pip install -r requirements.txt
 
 ### Human3.6M
 
-*   The official data is now not available. Please follow [I2L repo](PUT_I2L_REPO_LINK_HERE) to download it.
+*   The official data is now not available. Please follow [I2L repo]([PUT_I2L_REPO_LINK_HERE](https://lmb.informatik.uni-freiburg.de/projects/freihand/)) to download it.
 *   Download silhouette GT file `h36m_mask.zip`, and unzip it under `data/Human3.6M`.
 
 ### Real World Testset
