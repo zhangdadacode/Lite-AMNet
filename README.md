@@ -21,8 +21,8 @@ In the realm of Virtual Reality (VR) and Augmented Reality (AR), accurate 3D han
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/[YOUR_USERNAME]/[YOUR_REPO_NAME].git
-cd [YOUR_REPO_NAME]
+git clone https://github.com/zhangdadacode/Lite-AMNet.git
+cd Lite-AMNet
 
 # 2. Create a conda environment
 conda create -n liteamnet python=3.8
