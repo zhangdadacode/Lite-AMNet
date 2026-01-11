@@ -3,7 +3,6 @@
 
 > **Notice:** This repository contains the official implementation of the manuscript **"Efficient 3D Hand Mesh Reconstruction: Lightweight Anchor-Guided Multi-Scale Interaction"**, which has been submitted to **The Visual Computer**.
 >
-> If you find this code or our method useful for your research, please consider citing our paper (see [Citation](#citation) below).
 
 ## 📝 Abstract
 
@@ -20,8 +19,6 @@ In the realm of Virtual Reality (VR) and Augmented Reality (AR), accurate 3D han
 
 ## 🛠️ Installation
 
-Please follow the steps below to set up the environment.
-
 ```bash
 # 1. Clone the repository
 git clone https://github.com/[YOUR_USERNAME]/[YOUR_REPO_NAME].git
@@ -31,11 +28,13 @@ cd [YOUR_REPO_NAME]
 conda create -n liteamnet python=3.8
 conda activate liteamnet
 
-# 3. Install dependencies
-# It is recommended to install PyTorch matching your CUDA version first
-pip install torch torchvision --extra-index-url https://download.pytorch.org/whl/cu113
+# 3. Install PyTorch matching your CUDA version
+# For CUDA 11.3 (as used in our experiments):
+pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 --extra-index-url https://download.pytorch.org/whl/cu113
+# For other CUDA versions, please refer to the official PyTorch website: https://pytorch.org/get-started/previous-versions/
+
+# 4. Install other dependencies
 pip install -r requirements.txt
 
-# 4. Install Manopth (for MANO layer)
-# (根据您的具体情况，如果用了 manopth 或 smplx，请保留此步)
-pip install manopth
+# 5. Install Manopth (if needed)
+# pip install manopth
