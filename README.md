@@ -6,7 +6,6 @@
 
 ## 📝 Abstract
 
-<!-- 提示：这里直接粘贴编辑帮您修改好的那段Abstract，完全一致能增加好感度 -->
 In the realm of Virtual Reality (VR) and Augmented Reality (AR), accurate 3D hand modelling is pivotal. This paper introduces Lite-AMNet, a lightweight framework for 3D hand mesh reconstruction from a single RGB image. Addressing the challenge of balancing reconstruction accuracy and computational efficiency, Lite-AMNet employs an anchor-assisted attention sampling mechanism and a Shuffle Attention Combination Network (SACN) to enhance feature representation. Additionally, a Shared Compressed Attention Fusion (SCAF) module and a Multi-Scale Depthwise Separable Convolution (MS-DSConv) module are introduced to improve multi-scale feature interaction and geometric representation. Experiments on the FreiHAND dataset demonstrate superior performance, achieving a PA-MPJPE of 6.5 mm and a PA-MPVPE of 6.6 mm with only 9.47 million parameters, while maintaining a real-time inference speed of 73 FPS. These results underscore Lite-AMNet's potential for real-time applications in resource-constrained environments.
 
 ## 🛠️ Installation
@@ -81,6 +80,6 @@ python main.py --exp_name Lite_AMNet --PHASE pred  --Local_testing --config_file
 
 ## 🔗 Visualize model
 ```bash
-python main.py --PHASE demo_test_new_data --exp_name mobrecon_spconv --config_file ./configs/Lite-AMNet.yml --opts MODEL.NAME LiteSpiralGCN TRAIN.GPU_ID "[-1]" DATA.FREIHAND.USE True TRAIN.DATASET FreiHAND VAL.DATASET FreiHAND TEST.DATASET FreiHAND MODEL.RESUME ""
+python main.py --PHASE demo_test_new_data --exp_name mobrecon_spconv --config_file ./configs/Lite-AMNet.yml --opts MODEL.NAME LiteSpiralGCN TRAIN.GPU_ID "[-1]" DATA.FREIHAND.USE True TRAIN.DATASET FreiHAND VAL.DATASET FreiHAND TEST.DATASET FreiHAND MODEL.RESUME "checkpoints path"
 ```
 
