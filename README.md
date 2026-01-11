@@ -86,8 +86,12 @@ python main.py --PHASE demo_test_new_data --exp_name mobrecon_spconv --config_fi
 We acknowledge the open-source contributions from the following repositories.
 
 [HandMesh](https://github.com/SeanChenxy/HandMesh.git)
+
 [hand-graph-cnn](https://github.com/3d-hand-shape/hand-graph-cnn.git)
+
 [I2L-MeshNet_RELEASE](https://github.com/mks0601/I2L-MeshNet_RELEASE.git)
+
 [detectron2](https://github.com/facebookresearch/detectron2.git)
+
 [freihand](https://github.com/lmb-freiburg/freihand.git)
 
