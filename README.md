@@ -73,8 +73,8 @@ python main.py --exp_name Lite_AMNet --PHASE train --Local_testing --config_file
 ```
 
 ## 🔗 Evaluation
-```bash
 To evaluate our model, please download the pre-trained weights via [this link](PUT_YOUR_LINK_HERE) and place them in the `checkpoints` folder.
+```bash
 python main.py --exp_name Lite_AMNet --PHASE pred  --Local_testing --config_file .\configs\Lite-AMNet.yml
 ```
 
@@ -82,4 +82,12 @@ python main.py --exp_name Lite_AMNet --PHASE pred  --Local_testing --config_file
 ```bash
 python main.py --PHASE demo_test_new_data --exp_name mobrecon_spconv --config_file ./configs/Lite-AMNet.yml --opts MODEL.NAME LiteSpiralGCN TRAIN.GPU_ID "[-1]" DATA.FREIHAND.USE True TRAIN.DATASET FreiHAND VAL.DATASET FreiHAND TEST.DATASET FreiHAND MODEL.RESUME "checkpoints path"
 ```
+## Acknowledgement
+We acknowledge the open-source contributions from the following repositories.
+
+[HandMesh](https://github.com/SeanChenxy/HandMesh.git)
+[hand-graph-cnn](https://github.com/3d-hand-shape/hand-graph-cnn.git)
+[I2L-MeshNet_RELEASE](https://github.com/mks0601/I2L-MeshNet_RELEASE.git)
+[detectron2](https://github.com/facebookresearch/detectron2.git)
+[freihand](https://github.com/lmb-freiburg/freihand.git)
 
