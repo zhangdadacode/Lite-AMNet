@@ -34,7 +34,7 @@ pip install -r requirements.txt
 ## 🔗 Dataset
 ###  FreiHAND
 
-*   Please download FreiHAND dataset from [this link](PUT_YOUR_LINK_HERE), and create a soft link in `data`, i.e., `data/FreiHAND`.
+*   Please download FreiHAND dataset from [this link]([PUT_YOUR_LINK_HERE](https://lmb.informatik.uni-freiburg.de/projects/freihand/)), and create a soft link in `data`, i.e., `data/FreiHAND`.
 *   Download mesh GT file `freihand_train_mesh.zip`, and unzip it under `data/FreiHAND/training`.
 
 ### Human3.6M
