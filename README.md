@@ -9,14 +9,6 @@
 <!-- 提示：这里直接粘贴编辑帮您修改好的那段Abstract，完全一致能增加好感度 -->
 In the realm of Virtual Reality (VR) and Augmented Reality (AR), accurate 3D hand modelling is pivotal. This paper introduces Lite-AMNet, a lightweight framework for 3D hand mesh reconstruction from a single RGB image. Addressing the challenge of balancing reconstruction accuracy and computational efficiency, Lite-AMNet employs an anchor-assisted attention sampling mechanism and a Shuffle Attention Combination Network (SACN) to enhance feature representation. Additionally, a Shared Compressed Attention Fusion (SCAF) module and a Multi-Scale Depthwise Separable Convolution (MS-DSConv) module are introduced to improve multi-scale feature interaction and geometric representation. Experiments on the FreiHAND dataset demonstrate superior performance, achieving a PA-MPJPE of 6.5 mm and a PA-MPVPE of 6.6 mm with only 9.47 million parameters, while maintaining a real-time inference speed of 73 FPS. These results underscore Lite-AMNet's potential for real-time applications in resource-constrained environments.
 
-## 🖼️ Visual Results
-
-<!-- 建议：放一张 Teaser 图，展示输入图片和重建后的 3D 网格对比，或者 GIF 动图 -->
-<div align="center">
-  <img src="assets/teaser.png" width="800px" />
-  <p>Figure 1: Visual comparison of our method on the FreiHAND dataset.</p>
-</div>
-
 ## 🛠️ Installation
 
 ```bash
@@ -38,3 +30,25 @@ pip install -r requirements.txt
 
 # 5. Install Manopth (if needed)
 # pip install manopth
+
+## 🔗 Dataset
+###  FreiHAND
+
+*   Please download FreiHAND dataset from [this link](PUT_YOUR_LINK_HERE), and create a soft link in `data`, i.e., `data/FreiHAND`.
+*   Download mesh GT file `freihand_train_mesh.zip`, and unzip it under `data/FreiHAND/training`.
+
+### Human3.6M
+
+*   The official data is now not available. Please follow [I2L repo](PUT_I2L_REPO_LINK_HERE) to download it.
+*   Download silhouette GT file `h36m_mask.zip`, and unzip it under `data/Human3.6M`.
+
+### Real World Testset
+
+*   Please download the dataset from [this link](PUT_YOUR_REAL_WORLD_LINK_HERE), and create a soft link in `data`, i.e., `data/Ge`.
+
+### Complement data
+
+*   See [this file](PUT_FILE_LINK_HERE) for complement data. Then, create a soft link in `data`, i.e., `data/CompHand`.
+
+
+
