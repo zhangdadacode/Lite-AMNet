@@ -69,7 +69,7 @@ python main.py --exp_name Lite_AMNet --PHASE train --Local_testing --config_file
 ```
 
 ## 🔗 Evaluation
-To evaluate our model, please download the pre-trained weights via [this link](https://pan.baidu.com/s/1uEqRlXXILJf6lgSN8Sli3g?pwd=dm82) and place them in the `checkpoints` folder.
+To evaluate our model, please download the pre-trained weights via [this link](https://drive.google.com/drive/folders/1Ij-vkdMv3nXI4xbRcT8X6isyaWCiRJkU?usp=drive_link) and place them in the `checkpoints` folder.
 ```bash
 python tools/freihand-master/eval.py /home/hdh/桌面/zjj_Datas/Lite-AMNet/data/FreiHAND /home/hdh/桌面/zjj_Datas/Lite-AMNet/out/MultipleDatasets/Lite_AMNet --pred_file_name /home/hdh/桌面/zjj_Datas/Lite-AMNet/out/MultipleDatasets/Lite_AMNet/Lite_AMNet0.json
 
