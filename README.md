@@ -48,7 +48,7 @@ data
     ├── images
     ├── params.mat
     └── pose_gt.mat
-
+```
 ###  FreiHAND
 
 *Please download FreiHAND dataset from [this link](https://lmb.informatik.uni-freiburg.de/projects/freihand/), and create a soft link in `data`, i.e., `data/FreiHAND`.
@@ -61,7 +61,7 @@ data
 ### Complement data
 
 *   See [this file](https://github.com/SeanChenxy/HandMesh/blob/main/complement_data.md)for complement data. Then, create a soft link in `data`, i.e., `data/Compdata`.
-```
+
 
 ## train
 ```bash
