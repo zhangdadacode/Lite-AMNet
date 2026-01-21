@@ -1,0 +1,19 @@
+fvcore
+hydra-core
+iopath
+matplotlib
+numpy<1.24.0
+omegaconf
+open3d
+opencv-python
+openmesh
+# psbody-mesh 
+scikit-learn
+scipy
+scikit-image
+tensorboardx
+termcolor
+thop
+torch-geometric
+tqdm
+vctoolkit

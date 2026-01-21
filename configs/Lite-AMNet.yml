@@ -1,0 +1,29 @@
+VERSION: 0.1
+PHASE: 'train' #'train', 'eval','pred','demo_pt3D','demo','demo_test_new_data'
+MODEL:
+  NAME: Lite_AMNet
+  SPIRAL:
+    TYPE: 'DSConv'
+#  RESUME: ''
+  RESUME: '/home/hdh/desk/zjj_Datas/Lite-AMNet/checkpoints/mobrecon_GCN_checkpoint_079.pt'
+  MANO_PATH: '/home/hdh/desk/zjj_Datas/Lite-AMNet/template'
+DATA:
+  CONTRASTIVE: True
+  FREIHAND:
+    USE: True
+    ROOT: '/home/hdh/desk/zjj_Datas/Lite-AMNet/data/FreiHAND'
+  COMPHAND:
+    USE: False    
+    ROOT: '/home/hdh/desk/zjj_Datas/Lite-AMNet/data/Compdata'
+TRAIN:
+  DATASET: 'MultipleDatasets'
+  EPOCHS: 150  #150
+  BATCH_SIZE: 16
+  LR: 0.00001
+  GPU_ID: [0]
+VAL:
+  DATASET: 'Ge'
+  BATCH_SIZE: 1
+TEST:
+  DATASET: 'FreiHAND'
+  SAVE_PRED: False
