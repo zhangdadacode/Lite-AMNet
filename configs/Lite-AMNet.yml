@@ -4,8 +4,7 @@ MODEL:
   NAME: Lite_AMNet
   SPIRAL:
     TYPE: 'DSConv'
-#  RESUME: ''
-  RESUME: '/home/hdh/desk/zjj_Datas/Lite-AMNet/checkpoints/mobrecon_GCN_checkpoint_079.pt'
+  RESUME: ''
   MANO_PATH: '/home/hdh/desk/zjj_Datas/Lite-AMNet/template'
 DATA:
   CONTRASTIVE: True
