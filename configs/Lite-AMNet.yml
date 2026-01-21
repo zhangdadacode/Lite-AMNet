@@ -1,4 +1,4 @@
-VERSION: 0.1
+VERSION: 0.3
 PHASE: 'train' #'train', 'eval','pred','demo_pt3D','demo','demo_test_new_data'
 MODEL:
   NAME: Lite_AMNet
@@ -16,9 +16,9 @@ DATA:
     ROOT: '/home/hdh/desk/zjj_Datas/Lite-AMNet/data/Compdata'
 TRAIN:
   DATASET: 'MultipleDatasets'
-  EPOCHS: 150  #150
+  EPOCHS: 100  
   BATCH_SIZE: 16
-  LR: 0.00001
+  LR: 0.001
   GPU_ID: [0]
 VAL:
   DATASET: 'Ge'
