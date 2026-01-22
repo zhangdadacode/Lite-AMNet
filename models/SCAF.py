@@ -16,16 +16,7 @@ class SCAF(nn.Module):
             nn.BatchNorm2d(channels)
         )
 
-        self.global_branch = nn.Sequential(
-            nn.Conv2d(inter_channels, channels, 1, bias=False),
-            nn.BatchNorm2d(channels)
-        )
 
-        self.avg_pool = nn.AdaptiveAvgPool2d(1)
-        self.sigmoid = nn.Sigmoid()
-
-
-        self.enhance = nn.Dropout2d(0.05)  
 
     def forward(self, x, residual):
         xa = x + residual
