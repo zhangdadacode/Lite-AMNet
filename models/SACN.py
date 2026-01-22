@@ -57,12 +57,6 @@ class GlobalBranch(nn.Module):
         self.depthwise_conv1x1_v = nn.Conv1d(in_channels, in_channels, kernel_size=1, groups=in_channels)
         self.pointwise_conv1x1_v = nn.Conv1d(in_channels, in_channels, kernel_size=1)
 
-        self.depthwise_dconv_v = nn.Conv1d(in_channels, in_channels, kernel_size=3, padding='same',
-                                           dilation=dilation_rate, groups=in_channels)
-        self.pointwise_dconv_v = nn.Conv1d(in_channels, in_channels, kernel_size=1)
-
-        self.depthwise_conv1x1_post_attention = nn.Conv1d(in_channels, in_channels, kernel_size=1, groups=in_channels)
-        self.pointwise_conv1x1_post_attention = nn.Conv1d(in_channels, in_channels, kernel_size=1)
 
         self.norm = nn.LayerNorm(in_channels)
         self.return_attention = False
@@ -93,14 +87,6 @@ class GlobalBranch(nn.Module):
             self.last_attention = attention_map.detach().cpu()
         except Exception:
             self.last_attention = attention_map.cpu()
-
-        attention_output = torch.matmul(attention_map, v)
-
-        attention_output = attention_output.permute(0, 2, 1)
-
-        attention_output = self.depthwise_conv1x1_post_attention(attention_output)
-        attention_output = self.pointwise_conv1x1_post_attention(attention_output)
-
 
         attention_output = attention_output.permute(0, 2, 1)
         attention_output = self.norm(attention_output)
